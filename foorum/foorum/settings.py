@@ -40,10 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "Kasutajad",
-<<<<<<< HEAD
-=======
-    "foorum",
->>>>>>> 6778eafa2708174b1e8875ee4967843ecacd3f8a
     "polls",
 ]
 
