@@ -3,8 +3,8 @@
 <ul>
     {% if questions %}
         <ul>
-        {% for questions in questions %}
-        <li>{{ questions.title }}</li>
+        {% for question in questions %}
+        <li>{{ question.title }}</li>
         {% endfor %}
         </ul>
     {% else %}
