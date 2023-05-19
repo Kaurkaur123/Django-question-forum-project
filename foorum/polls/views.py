@@ -7,9 +7,9 @@ from django.http import HttpResponse
 
 def IndexView(request):
     template = loader.get_template('polls/index.html')
-    kusimus = Question.objects.all().values()
+    questions = Question.objects.all().values()
     context = {
-        'kusimus': kusimus,
+        'questions': questions,
     }
     return HttpResponse(template.render(context, request))
 

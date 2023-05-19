@@ -1,10 +1,10 @@
-{% extends "base.html"}
+{% extends "base.html"%}
 {% if user.is_authenticated %}
 <ul>
-    {% if kusimus %}
+    {% if questions %}
         <ul>
-        {% for küsimus in kusimus %}
-        <li>{{ küsimus.title }}</li>
+        {% for questions in questions %}
+        <li>{{ questions.title }}</li>
         {% endfor %}
         </ul>
     {% else %}
