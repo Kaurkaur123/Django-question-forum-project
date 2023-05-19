@@ -3,7 +3,7 @@ from django.shortcuts import render
 from polls.models import Question, Response
 from django.http import HttpResponse
 from django.template import loader
-
+from django.views import generic
 # Create your views here.
 
 
@@ -15,7 +15,7 @@ def signup (request):
 	return render(request,'Kasutajad/signup.html')
 
 def IndexView(request):
-    template = loader.get_template('index.html')
+    template = loader.get_template('home.html')
     questions = Question.objects.all().values()
     context = {
         'questions': questions,

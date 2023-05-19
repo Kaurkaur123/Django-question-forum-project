@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 
-
 {% block title %}Home{% endblock %}
 
 
@@ -10,26 +9,11 @@
 {% if user.is_authenticated %}
   Tere {{ user.username }}!
   <p><a href="{% url 'logout' %}">Log Out</a></p>
-  {% for question in questions %}
-  <h1>{{question.title}}</h1>
-  {% endfor %}
 
   
   {% else %}
   <p>You are not logged in</p>
   <a href="{% url 'login' %}">Log In</a>
 {% endif %}
-  {% if user.is_authenticated %}
-  <ul>
-      {% if questions %}
-          <ul>
-          {% for question in questions %}
-          <li>{{ question.title }}</li>
-          {% endfor %}
-          </ul>
-      {% else %}
-          <li>Nothing</li>
-      {% endif %}
-  </ul>
-  {% endif %}
+{% include 'index.html' %}
 {% endblock %}
