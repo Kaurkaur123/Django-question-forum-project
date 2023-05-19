@@ -24,7 +24,8 @@ urlpatterns = [
     path("accounts/", include("Kasutajad.urls")),  
     path("accounts/", include("django.contrib.auth.urls")),
     path("", TemplateView.as_view(template_name="home.html"), name="home"),
-    path("polls/", include("polls.urls")),
+    #path("", include("polls.urls")),
+    #path("", views.IndexView, name='polls'),
     path('accounts/signup/', views.signup, name="signup"),
 
 ]
