@@ -10,7 +10,9 @@
 {% if user.is_authenticated %}
   Tere {{ user.username }}!
   <p><a href="{% url 'logout' %}">Log Out</a></p>
-
+  {% for question in questions %}
+  <h1>{{question.title}}</h1>
+  {% endfor %}
 
   
   {% else %}

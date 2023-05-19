@@ -14,8 +14,8 @@ class Question(models.Model):
     def __str__(self):
         return self.title
 
-    def get_responses(self):
-        return self.responses.filter(parent=None)
+#    def get_responses(self):
+#        return self.responses.filter(parent=None)
 # Create your models here.
 class Response(models.Model):
     user = models.ForeignKey(User, null=False, on_delete=models.CASCADE)
@@ -28,5 +28,5 @@ class Response(models.Model):
     def __str__(self):
         return self.body
 
-    def get_responses(self):
-        return Response.objects.filter(parent=self)
+#    def get_responses(self):
+#        return Response.objects.filter(parent=self)
