@@ -1,5 +1,7 @@
+{% block title %}
+    Test
+{% endblock %}
 {% block content %}
-    {% extends "base.html"%}
     {% if user.is_authenticated %}
     <ul>
         {% if questions %}
@@ -10,10 +12,10 @@
             </ul>
         {% else %}
             <li>Nothing</li>
+        {% endif %}
     </ul>
     {% endif %}
 {% endblock %}
-
 <!--
 {% if latest_question_list %}
     <ul>
