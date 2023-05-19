@@ -1,17 +1,18 @@
-{% extends "base.html"%}
-{% if user.is_authenticated %}
-<ul>
-    {% if questions %}
-        <ul>
-        {% for question in questions %}
-        <li>{{ question.title }}</li>
-        {% endfor %}
-        </ul>
-    {% else %}
-        <li>Nothing</li>
-</ul>
-{% endif %}
-
+{% block content %}
+    {% extends "base.html"%}
+    {% if user.is_authenticated %}
+    <ul>
+        {% if questions %}
+            <ul>
+            {% for question in questions %}
+            <li>{{ question.title }}</li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <li>Nothing</li>
+    </ul>
+    {% endif %}
+{% endblock %}
 
 <!--
 {% if latest_question_list %}
