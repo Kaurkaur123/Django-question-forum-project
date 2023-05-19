@@ -1,3 +1,18 @@
+{% extends "base.html"}
+<ul>
+    {% if user.is_authenticated %}
+    {% if kusimus %}
+    {% for küsimus in kusimus %}
+    <li>{{ küsimus.title }}</li>
+    {% endfor %}
+    {% else %}
+    <p>Nothing</p>
+    {% endif %}
+
+</ul>
+
+
+<!--
 {% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
@@ -7,3 +22,4 @@
 {% else %}
     <p>No polls are available.</p>
 {% endif %}
+-->
