@@ -1,5 +1,13 @@
+{% extends "base.html"}
 <ul>
     {% if user.is_authenticated %}
+    {% if kusimus %}
+    {% for küsimus in kusimus %}
+    <li>{{ küsimus.title }}</li>
+    {% endfor %}
+    {% else %}
+    <p>Nothing</p>
+    {% endif %}
 
 </ul>
 
