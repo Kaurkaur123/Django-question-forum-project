@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 from django.shortcuts import render
 from django.template import loader
 from django.views import generic
@@ -16,4 +15,4 @@ def IndexView(request):
 
 
 # Create your views here.
->>>>>>> c79c9e29db5d2afdb599260b32da05962ef9fadc
+
