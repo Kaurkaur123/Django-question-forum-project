@@ -4,12 +4,13 @@ from django.views import generic
 from .models import Question, Response
 from django.http import HttpResponse
 
-class IndexView(generic.Listview):
+def IndexView(request):
     template = loader.get_template('polls/index.html')
     kusimus = Question.objects.all().values()
     context = {
         'kusimus': kusimus,
     }
+    return HttpResponse(template.render(context, request))
 
 
 # Create your views here.
