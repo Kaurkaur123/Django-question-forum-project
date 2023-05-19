@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic.base import TemplateView
 from foorum import views
-from polls import views as views2
+#from polls import views as views2
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -29,5 +29,6 @@ urlpatterns = [
     #path("", include("polls.urls")),
     #path("", views2.IndexView.as_view(), name='polls'),
     path('accounts/signup/', views.signup, name="signup"),
+    path("<int:pk>/", views.tuhjusView, name="tuhjus"),
 ]
 

@@ -3,6 +3,7 @@ from django.shortcuts import render
 from polls.models import Question, Response
 from django.http import HttpResponse
 from django.template import loader
+from django.urls import reverse
 from django.views import generic
 # Create your views here.
 
@@ -21,3 +22,6 @@ def IndexView(request):
         'questions': questions,
     }
     return HttpResponse(template.render(context, request))
+
+def tuhjusView(request, pk):
+    return render(request, 'tuhjus.html')
