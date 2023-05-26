@@ -49,3 +49,7 @@ class Comment(models.Model):
 from polls.models import Question
 b = Question(author_id=1, title="Mis su nimi on?")
 b.save()
+
+from polls.models import Question
+b = Question(author_id=1, title="Kuidas su päev läks?")
+b.save()
