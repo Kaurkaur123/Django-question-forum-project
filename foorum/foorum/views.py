@@ -25,4 +25,7 @@ def IndexView(request):
 
 def tuhjusView(request, pk):
     question = Question.objects.filter(id=pk)
+    context = {
+        'question': question,
+    }
     return render(request, 'tuhjus.html')
