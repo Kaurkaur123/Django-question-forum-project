@@ -1,14 +1,10 @@
-{% extend 'base.html' %}
-{% block title %}
-    Test
-{% endblock %}
 {% block content %}
     {% if user.is_authenticated %}
     <ul>
         {% if questions %}
             <ul>
             {% for question in questions %}
-            <li>{{ question.title }}</li>
+            <li><a href="{% url 'tuhjus' question.id %}">{{ question.title }}</a></li>
             {% endfor %}
             </ul>
         {% else %}
