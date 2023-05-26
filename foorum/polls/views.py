@@ -1,10 +1,10 @@
-from .models import Post
+from .models import Question
 from .forms import CommentForm
 from django.shortcuts import render, get_object_or_404
 
 def post_detail(request, slug):
     template_name = 'post_detail.html'
-    post = get_object_or_404(Post, slug=slug)
+    post = get_object_or_404(Question, slug=slug)
     comments = post.comments.filter(active=True)
     new_comment = None
     # Comment posted

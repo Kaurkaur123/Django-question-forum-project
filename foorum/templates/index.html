@@ -13,19 +13,6 @@
         {% endif %}
         {% else %}
     {% endif %}
-    
-    {% for comment in comments %}
-    <div class="comments" style="padding: 10px;">
-      <p class="font-weight-bold">
-        {{ comment.name }}
-        <span class=" text-muted font-weight-normal">
-          {{ comment.created_on }}
-        </span>
-      </p>
-      {{ comment.body | linebreaks }}
-    </div>
-    {% endfor %}
-    
 {% endblock %}
 <!--
 {% if latest_question_list %}
