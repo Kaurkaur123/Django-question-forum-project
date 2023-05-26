@@ -28,4 +28,4 @@ def tuhjusView(request, pk):
     context = {
         'question': question,
     }
-    return render(request, 'tuhjus.html')
+    return render(request, 'tuhjus.html', context)
