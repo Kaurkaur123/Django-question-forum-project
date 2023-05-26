@@ -29,4 +29,4 @@ def tuhjusView(request, pk):
         'question': question,
     }
     return render(request, 'tuhjus.html', context)
-#TAAATPAROTPASRO
+#TAAATPAROTPASROt
