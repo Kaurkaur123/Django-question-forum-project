@@ -1,12 +1,12 @@
 from django.contrib import admin
 from . import models
-from .models import Comment, Question
+#from .models import Comment, Question
 
 # Register your models here.
 admin.site.register(models.Question)
 admin.site.register(models.Response)
 
-@admin.register(Comment)
+admin.site.register(models.Comment)
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('name', 'body', 'post', 'created_on', 'active')
     list_filter = ('active', 'created_on')
