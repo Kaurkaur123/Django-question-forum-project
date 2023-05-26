@@ -27,7 +27,7 @@ urlpatterns = [
     path("", views.IndexView, name="home"),
     #path("", views.IndexView, name="index"),
     #path("", include("polls.urls")),
-    #path("", views2.IndexView.as_view(), name='polls'),
+    #path("", views2.IndexView.as_view(), name='polls'),t
     path('accounts/signup/', views.signup, name="signup"),
     path("<int:pk>/", views.tuhjusView, name="tuhjus"),
 ]
