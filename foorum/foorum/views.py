@@ -24,4 +24,5 @@ def IndexView(request):
     return HttpResponse(template.render(context, request))
 
 def tuhjusView(request, pk):
+    question = Question.objects.filter(id=pk)
     return render(request, 'tuhjus.html')
