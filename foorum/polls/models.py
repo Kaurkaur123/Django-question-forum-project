@@ -45,11 +45,3 @@ class Comment(models.Model):
 
 #    def get_responses(self):
 #        return Response.objects.filter(parent=self)
-
-from polls.models import Question
-b = Question(author_id=1, title="Mis su nimi on?")
-b.save()
-
-from polls.models import Question
-b = Question(author_id=1, title="Kuidas su päev läks?")
-b.save()
