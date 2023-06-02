@@ -7,8 +7,8 @@
 {% block content %}
  
 {% if user.is_authenticated %}
-  Tere {{ user.username }}!
-  <p><a href="{% url 'logout' %}">Log Out</a></p>
+<p style="font-family: arial ;">Tere {{ user.username }}!</p>
+  <p style="font-family: arial ;"><a href="{% url 'logout' %}">Log Out</a></p>
 
   
   {% else %}
