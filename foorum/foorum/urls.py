@@ -17,18 +17,25 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic.base import TemplateView
-from foorum import views
+from polls import views
+from foorum import views as views2
+
+
 #from polls import views as views2
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("accounts/", include("Kasutajad.urls")),  
     path("accounts/", include("django.contrib.auth.urls")),
-    path("", views.IndexView, name="home"),
+    path("", views2.IndexView, name="home"),
     #path("", views.IndexView, name="index"),
     #path("", include("polls.urls")),
     #path("", views2.IndexView.as_view(), name='polls'),t
-    path('accounts/signup/', views.signup, name="signup"),
-    path("<int:pk>/", views.tuhjusView, name="tuhjus"),
+    path('accounts/signup/', views2.signup, name="signup"),
+    #path("<int:pk>/", views.tuhjusView, name="tuhjus"),
+    #path('', include('polls.urls')),
+    path('question/<int:id>', views.questionPage, name='question'),
+    path('reply', views.replyPage, name='reply')
+    
 ]
 
