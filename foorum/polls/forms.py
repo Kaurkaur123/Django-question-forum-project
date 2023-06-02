@@ -1,6 +1,6 @@
 
 from django import forms
-from .models import Question, Response
+from .models import Question, Response#, Choice
 
 #class CommentForm(forms.ModelForm):
 #    class Meta:
@@ -20,4 +20,4 @@ class NewReplyForm(forms.ModelForm):
                 'rows': 2,
                 'placeholder': 'What are your thoughts?'
             })
-            }
+            }    
