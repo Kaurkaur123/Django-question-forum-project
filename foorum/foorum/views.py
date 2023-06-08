@@ -17,7 +17,7 @@ def signup (request):
 
 def IndexView(request):
     template = loader.get_template('home.html')
-    questions = Question.objects.all().values()
+    questions = Question.objects.all().order_by("-id").values()
     context = {
         'questions': questions,
     }

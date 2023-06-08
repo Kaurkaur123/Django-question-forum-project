@@ -1,5 +1,5 @@
 
-from .forms import  NewResponseForm, NewReplyForm
+from .forms import  NewResponseForm, NewReplyForm, NewQuestionForm
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from .models import Question, Response#, Choice
@@ -58,6 +58,24 @@ def replyPage(request):
 
     return redirect('index')
 
+
+@login_required(login_url='register')
+def newQuestionPage(request):
+    form = NewQuestionForm()
+
+    if request.method == 'POST':
+        try:
+            form = NewQuestionForm(request.POST)
+            if form.is_valid():
+                question = form.save(commit=False)
+                question.author = request.user
+                question.save()
+        except Exception as e:
+            print(e)
+            raise
+
+    context = {'form': form}
+    return render(request, 'makequestion.html', context)
 #def post_detail(request, slug):
  #   template_name = 'post_detail.html'
   #  post = get_object_or_404(Question, slug=slug)

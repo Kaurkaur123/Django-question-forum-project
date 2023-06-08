@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
   {% block content %}
-  <body bgcolor="FFE7FA", align="left">
+  <body>
   <div class="page question-page">
 
   <h2 class="question-title">{{question.title}}</h2>
@@ -18,6 +18,13 @@
   <input type="submit" value="Send" class="submit-button"/>
   </form>
   {% endif %}
+
+</div>
+<div class="fieldWrapper">
+</div>
+<button type="button" class="submit-button" href ="home">
+    <a href="{% url 'home' %}">BACK!</a>
+</button>
 
   <div class="responses-container">
     <h4 class="responses-container-heading">Responses:</h4>

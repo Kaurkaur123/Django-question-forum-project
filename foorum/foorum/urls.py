@@ -35,7 +35,8 @@ urlpatterns = [
     #path("<int:pk>/", views.tuhjusView, name="tuhjus"),
     #path('', include('polls.urls')),
     path('question/<int:id>', views.questionPage, name='question'),
-    path('reply', views.replyPage, name='reply')
+    path('reply', views.replyPage, name='reply'),
+    path('makequestion', views.newQuestionPage, name='makequestion'),
     
 ]
 
