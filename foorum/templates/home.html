@@ -9,6 +9,11 @@
 {% if user.is_authenticated %}
 <p style="font-family: arial ;">Tere {{ user.username }}!</p>
   <p style="font-family: arial ;"><a href="{% url 'logout' %}">Log Out</a></p>
+  <div class="big-title">
+    <p>Questions</p>
+  </div>
+    
+  
 
   
   {% else %}

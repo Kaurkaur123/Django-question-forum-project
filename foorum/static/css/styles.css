@@ -1,1 +1,173 @@
-/* see fail ja kõik selles on ühest tutorialist kopeeritud ja see ei ole hetkel kasutuses vist) */
+/*html,
+.top-right {
+    position: absolute;
+    top:36px;
+    right: 40px;
+    font-size: 1.3rem;
+   }
+
+.big-title {
+    position: absolute;
+    top:36px;
+    right: 500px;
+    font-size: 5rem;
+
+}
+*/
+
+html,
+
+body {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  background-color: #e1c8ff;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+  }
+
+a {
+  text-decoration: none;
+}
+
+
+blockquote {
+    border-left: 6px solid lightgray;
+    padding-left: 6px;
+    margin-left: 15px;
+  }
+
+.main {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 35px;
+  border-radius: 20px;
+  background-color: rgb(246, 247, 254);
+  box-shadow: 25px 10px #000000;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+  }
+
+.fieldWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.fieldWrapper label {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.fieldWrapper input {
+  margin-bottom: 6px;
+  border: 1px solid lightgray;
+  min-height: 40px;
+}
+
+.submit-button {
+  display: block;
+  width: 120px;
+  height: 40px;
+  border: 5px solid rgba(31, 0, 32, 0.426);
+  border-radius: 20px;
+  background-color: rgb(50, 0, 60);
+  color: white;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.question-title {
+  font-weight: 900;
+  margin: 20px auto 0 auto;
+}
+
+.question-body {
+  margin-bottom: 6px;
+}
+
+.question-author {
+  font-size: 14px;
+  color: lightgray;
+}
+
+.responses-container {
+  border-top: 1px solid lightgray;
+  margin-top: 30px;
+}
+
+.responses-container-heading {
+  color: lightgray;
+}
+
+.no-responses-text {
+  color: lightgray;
+}
+
+.response-body {
+  margin: 0;
+}
+
+.response-author {
+  color: lightgray;
+  font-style: italic;
+}
+
+.reply-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  text-transform: lowercase;
+  color: lightgray;
+  cursor: pointer;
+}
+
+.response-form {
+  margin-top: 20px;
+  border-top: 1px solid lightgray;
+  padding: 30px;
+}
+
+.reply-form-container {
+  display: none;
+}
+
+.reply-form-container.enabled {
+  display: block;
+}
+
+.reply-form textarea {
+  width: 100%;
+}
+
+.reply-form-cancel-button {
+  font-weight: 600;
+  color: orange;
+  background-color: transparent;
+  border: none;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+
+.reply-form-submit-button {
+  font-weight: 600;
+  color: white;
+  background-color: orange;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.big-title {
+    position: absolute;
+    top:10px;
+    right: 650px;
+    font-size: 3.3rem;
+
+}

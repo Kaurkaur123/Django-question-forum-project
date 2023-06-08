@@ -134,3 +134,9 @@ LOGOUT_REDIRECT_URL = "home"
 TEMPLATE_DIRS = (
     os.path.join(SETTINGS_PATH, 'templates'),
 )
+
+STATICFILES_DIRS =(
+         os.path.join(BASE_DIR, 'static'),
+     )
+
+STATIC_ROOT = ''
