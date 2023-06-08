@@ -31,3 +31,9 @@ class Response(models.Model):
     def get_responses(self):
         return Response.objects.filter(parent=self)
 
+#class Choice(models.Model):
+    #text = models.CharField(max_length=200, null=False)
+    #question = models.ForeignKey(Question, null=False, on_delete=models.CASCADE, related_name='choice')
+    #votes = models.IntegerField(default=0)
+    #def __str__(self):
+        #return self.text
