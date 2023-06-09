@@ -9,10 +9,7 @@ from django.views import generic
 
 
 def signup (request):
-#	questions = Question.objects.all().order_by("-created_at")
-#	context = {
-#		"questions" : questions
-#	}
+
 	return render(request,'Kasutajad/signup.html')
 
 def IndexView(request):
@@ -29,4 +26,3 @@ def tuhjusView(request, pk):
         'question': question,
     }
     return render(request, 'tuhjus.html', context)
-#TAAATPAROTPASROt

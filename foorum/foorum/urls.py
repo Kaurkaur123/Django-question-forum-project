@@ -28,12 +28,7 @@ urlpatterns = [
     path("accounts/", include("Kasutajad.urls")),  
     path("accounts/", include("django.contrib.auth.urls")),
     path("", views2.IndexView, name="home"),
-    #path("", views.IndexView, name="index"),
-    #path("", include("polls.urls")),
-    #path("", views2.IndexView.as_view(), name='polls'),t
     path('accounts/signup/', views2.signup, name="signup"),
-    #path("<int:pk>/", views.tuhjusView, name="tuhjus"),
-    #path('', include('polls.urls')),
     path('question/<int:id>', views.questionPage, name='question'),
     path('reply', views.replyPage, name='reply'),
     path('makequestion', views.newQuestionPage, name='makequestion'),
