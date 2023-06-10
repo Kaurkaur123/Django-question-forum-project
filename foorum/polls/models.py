@@ -30,3 +30,4 @@ class Response(models.Model):
     
     def get_responses(self):
         return Response.objects.filter(parent=self)
+#Ei tea, mida väga siin öelda, defineerimised ütlevad natuke asju, Response'i puhul kasutasime child parent süsteemi küll

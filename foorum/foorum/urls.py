@@ -26,7 +26,7 @@ urlpatterns = [
     path("accounts/", include("django.contrib.auth.urls")),
     path("", views2.IndexView, name="home"),
     path('accounts/signup/', views2.signup, name="signup"),
-    path('question/<int:id>', views.questionPage, name='question'),
+    path('question/<int:id>', views.questionPage, name='question'), #teeb leheküljed 1;2;3;4 jne
     path('reply', views.replyPage, name='reply'),
     path('makequestion', views.newQuestionPage, name='makequestion'),
     

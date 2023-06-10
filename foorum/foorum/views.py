@@ -19,3 +19,4 @@ def IndexView(request):
         'questions': questions,
     }
     return HttpResponse(template.render(context, request))
+#Tavalehekülg, võtab küsimuste listi databaasist ja HTML template'i abil 

@@ -31,7 +31,7 @@ def questionPage(request, id):
         'reply_form': reply_form,
     }
     return render(request, 'question.html', context)
-
+#Lehekülg iga küsimuse jaoks, formiga saab vastata küsimusele, forms.py sees on formid muide, mida kasutasime.
 
 @login_required(login_url='register')
 def replyPage(request):
@@ -52,7 +52,7 @@ def replyPage(request):
             raise
 
     return redirect('index')
-
+#Comment reply süsteem, parent childi kasutame, et määrata kuuluvust ehk mis kommentaar käib millise kommentaari kohta jms.
 
 @login_required(login_url='register')
 def newQuestionPage(request):
@@ -71,3 +71,4 @@ def newQuestionPage(request):
 
     context = {'form': form}
     return render(request, 'makequestion.html', context)
+#Uue küsimuse koostamine, kommenteerimine on raske.
