@@ -12,9 +12,17 @@
 
 html,
 
+.wallpaperstuff {
+  background: url("/static/img/wallpaper4.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 body {
   font-family: 'Courier New', Courier, monospace;
-  background-color: #e1c8ff;
+  <p class="wallpaperstuff"></p>
 }
 
 *, *::after, *::before {
@@ -38,7 +46,6 @@ blockquote {
   padding: 35px;
   border-radius: 20px;
   background-color: rgb(246, 247, 254);
-  box-shadow: 25px 10px #000000;
 }
 
 .page {
@@ -66,13 +73,12 @@ blockquote {
 }
 
 .submit-button {
-  display: block;
-  width: 120px;
-  height: 40px;
-  border: 5px solid rgba(31, 0, 32, 0.426);
-  border-radius: 20px;
-  background-color: rgb(50, 0, 60);
   color: white;
+  display: block;
+  width: 110px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: rgb(145,58,126);
   margin: 0 auto;
   cursor: pointer;
 }
@@ -88,7 +94,7 @@ blockquote {
 
 .question-author {
   font-size: 14px;
-  color: lightgray;
+  color: rgb(155, 155, 155);
 }
 
 .responses-container {
@@ -97,11 +103,11 @@ blockquote {
 }
 
 .responses-container-heading {
-  color: lightgray;
+  color: rgb(155, 155, 155);
 }
 
 .no-responses-text {
-  color: lightgray;
+  color: rgb(155, 155, 155);
 }
 
 .response-body {
@@ -109,7 +115,7 @@ blockquote {
 }
 
 .response-author {
-  color: lightgray;
+  color: rgb(155, 155, 155);
   font-style: italic;
 }
 
@@ -118,13 +124,13 @@ blockquote {
   border: none;
   padding: 0;
   text-transform: lowercase;
-  color: lightgray;
+  color: rgb(155, 155, 155);
   cursor: pointer;
 }
 
 .response-form {
   margin-top: 20px;
-  border-top: 1px solid lightgray;
+  border-top: 1px solid rgb(155, 155, 155);
   padding: 30px;
 }
 
@@ -142,7 +148,7 @@ blockquote {
 
 .reply-form-cancel-button {
   font-weight: 600;
-  color: orange;
+  color: rgb(13,96,64);
   background-color: transparent;
   border: none;
   padding: 4px 12px;
@@ -152,7 +158,7 @@ blockquote {
 .reply-form-submit-button {
   font-weight: 600;
   color: white;
-  background-color: orange;
+  background-color: rgb(13,96,64);
   border: none;
   padding: 4px 12px;
   border-radius: 4px;
@@ -171,14 +177,28 @@ blockquote {
   top:36px;
   right: 40px;
   font-size: 1.3rem;
+  background-color: #ffffff;
+  border: 4px solid rgb(13,98,65);
+  border-radius: 12px;
  }
+
+ .top-right:hover {
+  background-color: rgb(25, 181, 121) ; 
+  color: white;
+}
 
  .bottom-right {
   position: fixed;
-  top:700px;
-  right: 20px;
+  top:675px;
+  right: 10px;
   font-size: 2rem;
-  border: 5px solid purple;
-  background-color: #f2e7ff;
-  
+  padding: 12px 28px;
+  background-color: #ffffff;
+  border: 4px solid rgb(13,98,65);
+  border-radius: 12px;
  }
+
+ .bottom-right:hover {
+  background-color: rgb(25, 181, 121) ; 
+  color: white;
+}

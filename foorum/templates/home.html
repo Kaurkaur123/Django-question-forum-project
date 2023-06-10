@@ -14,7 +14,7 @@
   </div>
 
   <div class="bottom-right">
-  <li><a href="{% url 'makequestion' %}">Ask question</a></li>
+  <a href="{% url 'makequestion' %}">Ask question</a>
 </div>
 
   <div class="big-title">
@@ -25,8 +25,8 @@
 
   
   {% else %}
-  <p style="font-family: impact;">You are not logged in</p>
-  <a href="{% url 'login' %}">Log In</a>
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}"><b>Log In</b></a>
 {% endif %}
 {% include 'index.html' %}
 
