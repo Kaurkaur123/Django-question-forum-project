@@ -20,9 +20,6 @@ from django.views.generic.base import TemplateView
 from polls import views
 from foorum import views as views2
 
-
-#from polls import views as views2
-
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("accounts/", include("Kasutajad.urls")),  

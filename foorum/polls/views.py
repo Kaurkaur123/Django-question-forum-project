@@ -2,7 +2,7 @@
 from .forms import  NewResponseForm, NewReplyForm, NewQuestionForm
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
-from .models import Question, Response#, Choice
+from .models import Question, Response
 
 
 def questionPage(request, id):
@@ -22,18 +22,13 @@ def questionPage(request, id):
             print(e)
             raise
 
-    #choices = Choice.objects.get(question=id)
     question = Question.objects.get(id=id)
-    #if question.body == 'Choice':
-        #if request.method == 'POST':
-            #try:
 
 
     context = {
         'question': question,
         'response_form': response_form,
         'reply_form': reply_form,
-        #'choices': choices,
     }
     return render(request, 'question.html', context)
 
@@ -76,4 +71,3 @@ def newQuestionPage(request):
 
     context = {'form': form}
     return render(request, 'makequestion.html', context)
-

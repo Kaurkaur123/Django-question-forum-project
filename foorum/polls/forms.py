@@ -1,11 +1,7 @@
 
 from django import forms
-from .models import Question, Response#, Choice
+from .models import Question, Response
 
-#class CommentForm(forms.ModelForm):
-#    class Meta:
-#        model = Comment
-#        fields = ('name', 'body')
 class NewResponseForm(forms.ModelForm):
     class Meta:
         model = Response
